@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity multiplexador4x16 is
+    Port ( 	Selector : in  STD_LOGIC_VECTOR (3 downto 0);
+				entrada_A, entrada_B, entrada_C, entrada_D, entrada_E, entrada_F, entrada_G, entrada_H: in  STD_LOGIC_VECTOR (15 downto 0);
+				entrada_I, entrada_J, entrada_K, entrada_L, entrada_M, entrada_N, entrada_O, entrada_P: in  STD_LOGIC_VECTOR (15 downto 0);
+				saida   : out STD_LOGIC_VECTOR (15 downto 0));
+end multiplexador4x16;
+
+architecture mu4x16 of multiplexador4x16 is
+begin
+	with Selector select
+		 saida <= 	entrada_A when "0000",
+						entrada_B when "0001",
+						entrada_C when "0010",
+						entrada_D when "0011",
+						entrada_E when "0100",
+						entrada_F when "0101",
+						entrada_G when "0110",
+						entrada_H when "0111",
+						entrada_I when "1000",
+						entrada_J when "1001",
+						entrada_K when "1010",
+						entrada_L when "1011",
+						entrada_M when "1100",
+						entrada_N when "1101",
+						entrada_O when "1110",
+						entrada_P when others;
+end mu4x16;
