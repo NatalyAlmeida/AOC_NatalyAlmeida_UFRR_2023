@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity LogPose is
-
+ 
 port( 
 	clock : in std_logic
  );
