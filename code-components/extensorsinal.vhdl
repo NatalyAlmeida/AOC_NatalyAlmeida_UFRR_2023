@@ -18,3 +18,4 @@ begin
 			saida(15 downto 4) <= "000000000000";
 	end process;
 end extensor4x16;
+	
